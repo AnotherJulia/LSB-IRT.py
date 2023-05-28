@@ -35,7 +35,7 @@ ir = flat_ir.reshape(zcount, xcount)
 # Plot the data in a heatmap
 def plot_ir_heatmap():
     fig_hm, ax_hm = plt.subplots()
-    ir_heatmap = ax_hm.imshow(ir[:-1], origin="lower", extent=(raw_irt_data[-1,0], raw_irt_data[0,0], raw_irt_data[0,1], raw_irt_data[-1,1]), interpolation="nearest", aspect="auto")
+    ir_heatmap = ax_hm.imshow(ir[:-1], origin="lower", extent=(raw_irt_data[0,0], raw_irt_data[-1,0], raw_irt_data[0,1], raw_irt_data[-1,1]), interpolation="nearest", aspect="auto")
     plt.colorbar(ir_heatmap, label="infrared radiation intensity", location="bottom")
     ax_hm.set_xlabel("x/c [-]")
     ax_hm.set_ylabel("z/c [-]")
